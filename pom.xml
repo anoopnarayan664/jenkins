@@ -26,11 +26,16 @@
                 </configuration>
             </plugin>
 
+<dependency>
+    <groupId>io.github.git-commit-id</groupId>
+    <artifactId>git-commit-id-maven-plugin</artifactId>
+    <version>9.0.1</version>
+</dependency>
             <!-- To handle Git version information -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-git-commit-id-plugin</artifactId>
-                <version>2.3.0</version>
+                <version>9.0.1</version>
                 <executions>
                     <execution>
                         <goals>
