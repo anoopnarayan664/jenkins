@@ -13,7 +13,7 @@
     <name>Jenkins Git Integration</name>
 
     <!-- Maven Compiler Plugin Configuration -->
-    <build>
+     <build>
         <plugins>
             <!-- Compile the code using Java version 1.8 -->
             <plugin>
@@ -46,7 +46,7 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>
+      </build>
 
     <!-- Jenkins Git Plugin Dependency (if needed for the Jenkins job itself) -->
     <dependencies>
