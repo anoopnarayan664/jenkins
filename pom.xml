@@ -1,75 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project>
 
-    <!-- Basic project information --> 
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.example</groupId>
-    <artifactId>jenkins-git-integration</artifactId>  
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+  <modelVersion>4.0.0</modelVersion>
 
-    <name>Jenkins Git Integration</name>
+  <groupId>com.flipkart</groupId>
+  <artifactId>flipkart</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
 
-    <!-- Maven Compiler Plugin Configuration -->
-     <build>
-        <plugins>
-            <!-- Compile the code using Java version 1.8 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
+  <name>flipkart Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+
   <dependencies>
-   <dependency>
-    <groupId>io.github.git-commit-id</groupId>
-    <artifactId>git-commit-id-maven-plugin</artifactId>
-    <version>9.0.1</version>
-   </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
-            <!-- To handle Git version information -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-git-commit-id-plugin</artifactId>
-                <version>9.0.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>rev</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-      </build>
 
-    <!-- Jenkins Git Plugin Dependency (if needed for the Jenkins job itself) -->
-    <dependencies>
-        <!-- Example dependency for using Jenkins Git plugin (JUnit for testing) -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.7.0</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
-    <!-- Jenkins Build Environment Plugin Setup (Optional) -->
-    <profiles>
-        <profile>
-            <id>jenkins</id>
-            <properties>
-                <!-- Git repository URL for Jenkins to checkout -->
-                <git.repo.url>https://github.com/yourusername/your-repository.git</git.repo.url>
-                <!-- Branch to be checked out -->
-                <git.repo.branch>main</git.repo.branch>
-            </properties>
-        </profile>
-    </profiles>
+  <build>
+    <finalName>flipkart</finalName>
+  </build>
 
 </project>
